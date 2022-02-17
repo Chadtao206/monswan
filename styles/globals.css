@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+  display: grid;
+}
+
+* {
+  transition: background ease-in-out 0.2s;
+}
+
+#__next {
+  height: 100%;
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+}
+
+:root {
+  --background: theme("colors.white");
+  --background-secondary: theme("colors.gray.50");
+  --accent-medium: theme("colors.white");
+  --accent-dark: theme("colors.gray.900");
+  --primary-dark: theme("colors.gray.900");
+  --primary-medium: theme("colors.gray.700");
+  --primary-light: theme("colors.gray.200");
+}
+
+[data-theme="dark"] {
+  --background: theme("colors.black");
+  --background-secondary: theme("colors.gray.800");
+  --accent-dark: theme("colors.fuchsia.900");
+  --accent-medium: theme("colors.fuchsia.700");
+  --accent-light: theme("colors.fuchsia.500");
+  --primary-dark: theme("colors.gray.300");
+  --primary-medium: theme("colors.gray.200");
+  --primary-light: theme("colors.gray.100");
+}
+
+[data-theme="emerald"] {
+  --background: theme("colors.white");
+  --accent-dark: theme("colors.emerald.900");
+  --accent-medium: theme("colors.emerald.700");
+  --accent-light: theme("colors.emerald.500");
+}
+
+[data-theme="dracula"] {
+  --background: theme("colors.gray.900");
+  --background-secondary: theme("colors.gray.800");
+  --accent-dark: theme("colors.pink.900");
+  --accent-medium: theme("colors.pink.700");
+  --accent-light: theme("colors.pink.500");
+  --primary-dark: theme("colors.gray.300");
+  --primary-medium: theme("colors.gray.200");
+  --primary-light: theme("colors.gray.100");
+}
+
+[data-theme="kyleena"] {
+  --background: #665faa;
+  --background-secondary: theme("colors.gray.50");
+  --accent-medium: theme("colors.white");
+  --accent-dark: theme("colors.gray.900");
+  --primary-dark: theme("colors.gray.900");
+  --primary-medium: theme("colors.gray.700");
+  --primary-light: theme("colors.gray.200");
+}
+
+[data-theme="altreno"] {
+  --background: #6a26da;
+  --background-secondary: #dae4ef;
+  --accent-medium: colors.gray.200;
+  --accent-dark: theme("colors.gray.900");
+  --primary-dark: theme("colors.gray.900");
+  --primary-medium: theme("colors.gray.700");
+  --primary-light: theme("colors.blue.100");
+}
+
+[data-theme="deplin"] {
+  --background: #7d5375;
+  --background-secondary: #dae4ef;
+  --accent-medium: colors.gray.200;
+  --accent-dark: theme("colors.gray.800");
+  --primary-dark: theme("colors.indigo.800");
+  --primary-medium: theme("colors.gray.600");
+  --primary-light: theme("colors.indigo.200");
+}
+
+/* selector menu */
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+}
+
+button.toggler {
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 27px;
+  left: 39px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent!important;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul.menuUl {
+  padding: 25px;
+  position: absolute;
+  top: 100px;
+  width: 200px;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon-placeholder {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  flex: 20px 0;
+  margin-right: 20px;
+}
+
+.text-placeholder {
+  width: 200px;
+  flex: 1;
+}
+
+/* selector menu */
+
+/* heart */
+.heart {
+  background-color: red;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  transform: rotate(45deg);
+  animation: animateHeart 1.2s infinite;
+}
+
+.heart::before, .heart::after {
+  content: "";
+    width: 16px;
+    height: 16px;
+    background-color: red;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.heart::after {
+  top: -8px;
+}
+
+.heart::before {
+  left: -8px;
+};
+
+
+@keyframes animateHeart {
+  0% {
+    transform: rotate(45deg) scale(0.8);
+  }
+  5% {
+    transform: rotate(45deg) scale(0.9);
+  }
+  10% {
+    transform: rotate(45deg) scale(0.8);
+  }
+  15% {
+    transform: rotate(45deg) scale(1);
+  }
+  50% {
+    transform: rotate(45deg) scale(0.8);
+  }
+  100% {
+    transform: rotate(45deg) scale(0.8);
+  }
+}
+/* heart */
+
+.question-container {
+  transition: height 300ms ease-out;
+}

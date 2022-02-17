@@ -1,0 +1,7 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "quotes": ["warn", "single"],
+    "@next/next/no-img-element": "off"
+  }
+}
