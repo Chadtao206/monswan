@@ -126,7 +126,7 @@ export default function Home() {
       <Navbar theme={theme} />
       <Sidebar setTheme={setTheme} />
       <main>
-        <div className="relative pt-12 pb-16 h-full px-4 sm:px-6 lg:pt-16 lg:pb-20 lg:px-8 bg-th-background">
+        <div className="relative pt-12 pb-12 h-full px-4 sm:px-6 lg:pt-16 lg:pb-16 lg:px-8 bg-th-background">
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center">
               <h2 className="text-3xl tracking-tight font-extrabold text-th-accent-dark sm:text-4xl">
